@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,7 +16,7 @@ msgstr ""
 #. module: survey_sale_generation
 #: model:product.product,name:survey_sale_generation.advanced_backup
 #: model:product.template,name:survey_sale_generation.advanced_backup_product_template
-#: model:survey.label,value:survey_sale_generation.survey_support_q3_sug2
+#: model:survey.question.answer,value:survey_sale_generation.survey_support_q3_sug2
 msgid "Advanced Backup"
 msgstr ""
 
@@ -28,13 +28,11 @@ msgid ""
 msgstr ""
 
 #. module: survey_sale_generation
-#: model:survey.question,question:survey_sale_generation.survey_support_q3
 #: model:survey.question,title:survey_sale_generation.survey_support_q3
 msgid "Choose your extras"
 msgstr ""
 
 #. module: survey_sale_generation
-#: model:survey.question,question:survey_sale_generation.survey_support_q2
 #: model:survey.question,title:survey_sale_generation.survey_support_q2
 msgid "Choose your subscription level"
 msgstr ""
@@ -47,12 +45,11 @@ msgstr ""
 #. module: survey_sale_generation
 #: model:product.product,name:survey_sale_generation.dedicated_server
 #: model:product.template,name:survey_sale_generation.dedicated_server_product_template
-#: model:survey.label,value:survey_sale_generation.survey_support_q3_sug1
+#: model:survey.question.answer,value:survey_sale_generation.survey_support_q3_sug1
 msgid "Dedicated Server"
 msgstr ""
 
 #. module: survey_sale_generation
-#: model:survey.question,question:survey_sale_generation.survey_support_q0
 #: model:survey.question,title:survey_sale_generation.survey_support_q0
 msgid "E-mail address"
 msgstr ""
@@ -63,7 +60,7 @@ msgid "Generate Quotations"
 msgstr ""
 
 #. module: survey_sale_generation
-#: model:survey.label,value:survey_sale_generation.survey_support_q2_sug2
+#: model:survey.question.answer,value:survey_sale_generation.survey_support_q2_sug2
 msgid "Gold"
 msgstr ""
 
@@ -79,7 +76,6 @@ msgid "Hire Technical Support"
 msgstr ""
 
 #. module: survey_sale_generation
-#: model:survey.question,question:survey_sale_generation.survey_support_q1
 #: model:survey.question,title:survey_sale_generation.survey_support_q1
 msgid "How many hours will you hire monthly?"
 msgstr ""
@@ -95,12 +91,12 @@ msgstr ""
 #. module: survey_sale_generation
 #: model:product.product,name:survey_sale_generation.mail_management
 #: model:product.template,name:survey_sale_generation.mail_management_product_template
-#: model:survey.label,value:survey_sale_generation.survey_support_q3_sug3
+#: model:survey.question.answer,value:survey_sale_generation.survey_support_q3_sug3
 msgid "Mail Management"
 msgstr ""
 
 #. module: survey_sale_generation
-#: model:survey.label,value:survey_sale_generation.survey_support_q2_sug1
+#: model:survey.question.answer,value:survey_sale_generation.survey_support_q2_sug1
 msgid "Platinum"
 msgstr ""
 
@@ -111,8 +107,8 @@ msgid "Platinum support"
 msgstr ""
 
 #. module: survey_sale_generation
-#: model:ir.model.fields,field_description:survey_sale_generation.field_survey_label__product_id
 #: model:ir.model.fields,field_description:survey_sale_generation.field_survey_question__product_id
+#: model:ir.model.fields,field_description:survey_sale_generation.field_survey_question_answer__product_id
 msgid "Product"
 msgstr ""
 
@@ -138,7 +134,7 @@ msgid "Show In Sale Order Comment"
 msgstr ""
 
 #. module: survey_sale_generation
-#: model:survey.label,value:survey_sale_generation.survey_support_q2_sug3
+#: model:survey.question.answer,value:survey_sale_generation.survey_support_q2_sug3
 msgid "Silver"
 msgstr ""
 
@@ -165,7 +161,7 @@ msgid "Survey"
 msgstr ""
 
 #. module: survey_sale_generation
-#: model:ir.model,name:survey_sale_generation.model_survey_label
+#: model:ir.model,name:survey_sale_generation.model_survey_question_answer
 msgid "Survey Label"
 msgstr ""
 
@@ -193,7 +189,7 @@ msgstr ""
 #, python-format
 msgid ""
 "This order has been created from this survey input: <a href=# data-oe-"
-"model=survey.user_input data-oe-id=%d>%s</a>"
+"model=survey.user_input data-oe-id=%(id)d>%(title)s</a>"
 msgstr ""
 
 #. module: survey_sale_generation
