@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -14,13 +14,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: survey_crm_generation
-#: model:survey.question,question:survey_crm_generation.survey_oca_q3
 #: model:survey.question,title:survey_crm_generation.survey_oca_q3
 msgid "And your name?"
 msgstr ""
 
 #. module: survey_crm_generation
-#: model_terms:survey.survey,description:survey_crm_generation.become_partner
+#: model:survey.survey,description:survey_crm_generation.become_partner
 msgid "Be part of the Odoo Community!"
 msgstr ""
 
@@ -46,7 +45,6 @@ msgid "Crm Team"
 msgstr ""
 
 #. module: survey_crm_generation
-#: model:survey.question,question:survey_crm_generation.survey_oca_q0
 #: model:survey.question,title:survey_crm_generation.survey_oca_q0
 msgid "E-mail address"
 msgstr ""
@@ -74,7 +72,7 @@ msgid "Lead/Opportunity"
 msgstr ""
 
 #. module: survey_crm_generation
-#: model:crm.lead.tag,name:survey_crm_generation.tag_oca_partnership
+#: model:crm.tag,name:survey_crm_generation.tag_oca_partnership
 #: model:crm.team,name:survey_crm_generation.oca_partnership_leads
 msgid "OCA Partnership"
 msgstr ""
@@ -100,7 +98,7 @@ msgid "Survey"
 msgstr ""
 
 #. module: survey_crm_generation
-#: model:crm.lead.tag,name:survey_crm_generation.tag_survey_leads
+#: model:crm.tag,name:survey_crm_generation.tag_survey_leads
 msgid "Survey Leads"
 msgstr ""
 
@@ -130,7 +128,6 @@ msgid "This question requires an answer."
 msgstr ""
 
 #. module: survey_crm_generation
-#: model:survey.question,question:survey_crm_generation.survey_oca_q1
 #: model:survey.question,title:survey_crm_generation.survey_oca_q1
 msgid "Your company name?"
 msgstr ""
