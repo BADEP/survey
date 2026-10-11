@@ -3,7 +3,7 @@
 {
     "name": "Survey company rules",
     "summary": "Company security for surveys",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "development_status": "Beta",
     "category": "Marketing/Survey",
     "website": "https://github.com/OCA/survey",
@@ -13,6 +13,6 @@
     "depends": ["survey"],
     "data": [
         "views/survey_views.xml",
-        "security/survey_security.xml",
+        "security/ir.access.csv",
     ],
 }
