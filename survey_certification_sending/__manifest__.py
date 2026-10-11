@@ -3,7 +3,7 @@
 {
     "name": "Survey Certification Sending",
     "summary": "Controls the automatic sending of certifications in surveys.",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "development_status": "Beta",
     "category": "Marketing/Survey",
