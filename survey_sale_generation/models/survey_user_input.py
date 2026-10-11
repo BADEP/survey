@@ -57,8 +57,9 @@ class SurveyUserInput(models.Model):
         else:
             # We can set a related question that will be the qty multiplier
             qty_question = self.user_input_line_ids.filtered(
-                lambda x: x.question_id
-                == input_line.question_id.product_uom_qty_question_id
+                lambda x: (
+                    x.question_id == input_line.question_id.product_uom_qty_question_id
+                )
             )
             # We'll accept 0 as a valid answer. Survey admin can deal with answer
             # validation on top of it
