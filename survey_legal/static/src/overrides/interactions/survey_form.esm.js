@@ -7,15 +7,15 @@ import {patch} from "@web/core/utils/patch";
 import {SurveyForm} from "@survey/interactions/survey_form";
 
 patch(SurveyForm.prototype, {
-    validateForm(formEl, formData) {
-        const res = super.validateForm(formEl, formData);
-        const $legalTermsInput = formEl.querySelector("#accepted_legal_terms");
-        if ($legalTermsInput && !$legalTermsInput.checked) {
-            this.showErrors({
-                accepted_legal_terms_wrapper: _t("You must accept the legal terms"),
-            });
-            return false;
-        }
-        return res;
-    },
+  validateForm(formEl, formData) {
+    const res = super.validateForm(formEl, formData);
+    const $legalTermsInput = formEl.querySelector("#accepted_legal_terms");
+    if ($legalTermsInput && !$legalTermsInput.checked) {
+      this.showErrors({
+        accepted_legal_terms_wrapper: _t("You must accept the legal terms"),
+      });
+      return false;
+    }
+    return res;
+  },
 });

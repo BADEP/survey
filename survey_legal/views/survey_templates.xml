@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="survey_legal_terms" name="Survey legal terms acceptance">
         <div
             t-if="survey.legal_terms"
-            class="js_question-wrapper form-check col-lg-12 ps-2"
             id="accepted_legal_terms_wrapper"
+            class="js_question-wrapper form-check col-lg-12 ps-2"
         >
             <input
+                id="accepted_legal_terms"
                 class="form-check-input position-relative ms-0 me-2 mb-2"
                 type="checkbox"
                 name="accepted_legal_terms"
-                id="accepted_legal_terms"
                 required="required"
             />
             <label for="accepted_legal_terms" class="control-label form-check-label">
