@@ -18,8 +18,10 @@ class SurveyUserInput(models.Model):
         questions = self.survey_id.question_ids
         nodes = questions.survey_question_node_id
         return questions.filtered(
-            lambda x: x.res_partner_field.name == "name"
-            and (x.survey_question_node_id or x in nodes)
+            lambda x: (
+                x.res_partner_field.name == "name"
+                and (x.survey_question_node_id or x in nodes)
+            )
         )
 
     def _get_partner_groups(self):
@@ -29,9 +31,11 @@ class SurveyUserInput(models.Model):
         return self.user_input_line_ids.filtered(
             lambda x: x.question_id.res_partner_field and not x.skipped
         ).grouped(
-            lambda x: x.question_id
-            if x.question_id in nodes
-            else x.question_id.survey_question_node_id
+            lambda x: (
+                x.question_id
+                if x.question_id in nodes
+                else x.question_id.survey_question_node_id
+            )
         )
 
     def _get_partner_node_children(self, groups, node):
@@ -93,8 +97,11 @@ class SurveyUserInput(models.Model):
         """Extract the values of a single contact out of its group of answers"""
         self.ensure_one()
         basic_inputs = elegible_inputs.filtered(
-            lambda x: x.answer_type not in {"suggestion"}
-            and x.question_id.res_partner_field.name not in {"comment", "company_name"}
+            lambda x: (
+                x.answer_type not in {"suggestion"}
+                and x.question_id.res_partner_field.name
+                not in {"comment", "company_name"}
+            )
         )
         vals = {
             line.question_id.res_partner_field.name: line[f"value_{line.answer_type}"]

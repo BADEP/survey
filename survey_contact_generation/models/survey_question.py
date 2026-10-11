@@ -25,9 +25,9 @@ class SurveyQuestion(models.Model):
     # to be able to use it in view modifiers
     res_partner_field_name = fields.Char(related="res_partner_field.name")
     res_partner_type = fields.Selection(
-        selection=lambda self: self.env["res.partner"]
-        ._fields["type"]
-        ._description_selection(self.env),
+        selection=lambda self: (
+            self.env["res.partner"]._fields["type"]._description_selection(self.env)
+        ),
         string="Contact address type",
         help="Address type of the contact this question opens. Contacts share "
         "their address with their parent, so a node holding an address of its "
