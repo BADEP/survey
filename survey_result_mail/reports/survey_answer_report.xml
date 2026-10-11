@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="survey_result_report_view_document">
-        <t t-call="web.internal_layout">
-            <t t-set="address">
-                <address
-                    t-field="user_input.partner_id"
-                    t-options='{"widget": "contact", "fields": ["name", "email"]}'
-                />
-            </t>
+        <t t-set="address">
+            <address
+                t-field="user_input.partner_id"
+                t-options='{"widget": "contact", "fields": ["name", "email"]}'
+            />
+        </t>
+        <t t-call="web.internal_layout" address="address">
             <div class="alert alert-info">
                 <i class="fa fa-info-circle me-2" />
                 <span>Reponses to your survey</span>
