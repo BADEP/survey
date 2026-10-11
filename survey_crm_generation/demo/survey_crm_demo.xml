@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record model="crm.tag" id="tag_survey_leads">
+    <record id="tag_survey_leads" model="crm.tag">
         <field name="name">Survey Leads</field>
     </record>
-    <record model="crm.tag" id="tag_oca_partnership">
+    <record id="tag_oca_partnership" model="crm.tag">
         <field name="name">OCA Partnership</field>
     </record>
     <!-- Sales Team -->
-    <record model="crm.team" id="oca_partnership_leads">
+    <record id="oca_partnership_leads" model="crm.team">
         <field name="name">OCA Partnership</field>
     </record>
     <!-- Survey -->
-    <record model="survey.survey" id="become_partner">
+    <record id="become_partner" model="survey.survey">
         <field name="title">Become OCA Partner</field>
         <field name="description">Be part of the Odoo Community!</field>
         <field name="access_token">08b4db21-66cc-4c69-a712-cc364c54902c</field>
@@ -24,33 +24,33 @@
         />
         <field name="users_can_go_back" eval="True" />
     </record>
-    <record model="survey.question" id="survey_oca_q0">
+    <record id="survey_oca_q0" model="survey.question">
         <field name="survey_id" ref="become_partner" />
-        <field name="sequence">0</field>
+        <field name="sequence" eval="0" />
         <field name="title">E-mail address</field>
         <field name="question_type">text_box</field>
         <field name="show_in_lead_description" eval="True" />
         <field name="constr_mandatory" eval="True" />
     </record>
-    <record model="survey.question" id="survey_oca_q1">
+    <record id="survey_oca_q1" model="survey.question">
         <field name="survey_id" ref="become_partner" />
-        <field name="sequence">1</field>
+        <field name="sequence" eval="1" />
         <field name="title">Your company name?</field>
         <field name="question_type">text_box</field>
         <field name="show_in_lead_description" eval="True" />
         <field name="constr_mandatory" eval="True" />
     </record>
-    <record model="survey.question" id="survey_oca_q3">
+    <record id="survey_oca_q3" model="survey.question">
         <field name="survey_id" ref="become_partner" />
-        <field name="sequence">2</field>
+        <field name="sequence" eval="2" />
         <field name="title">And your name?</field>
         <field name="question_type">text_box</field>
         <field name="show_in_lead_description" eval="True" />
         <field name="constr_mandatory" eval="True" />
     </record>
-    <record model="survey.question" id="survey_oca_q4">
+    <record id="survey_oca_q4" model="survey.question">
         <field name="survey_id" ref="become_partner" />
-        <field name="sequence">6</field>
+        <field name="sequence" eval="6" />
         <field name="title">Referenced by</field>
         <field name="question_type">simple_choice</field>
         <field name="comments_allowed" eval="True" />
@@ -59,14 +59,14 @@
         <field name="crm_lead_field" ref="crm.field_crm_lead__referred" />
         <field name="constr_mandatory" eval="True" />
     </record>
-    <record model="survey.question.answer" id="survey_oca_q4_sug1">
+    <record id="survey_oca_q4_sug1" model="survey.question.answer">
         <field name="question_id" ref="survey_oca_q4" />
-        <field name="sequence">1</field>
+        <field name="sequence" eval="1" />
         <field name="value">TV</field>
     </record>
-    <record model="survey.question.answer" id="survey_oca_q4_sug2">
+    <record id="survey_oca_q4_sug2" model="survey.question.answer">
         <field name="question_id" ref="survey_oca_q4" />
-        <field name="sequence">2</field>
+        <field name="sequence" eval="2" />
         <field name="value">Internet</field>
     </record>
 </odoo>
