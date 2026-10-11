@@ -15,7 +15,7 @@
             <div class="page">
                 <div class="row col-10 offset-1">
                     <t
-                        t-raw="user_input.with_context(survey_result_mode='bootstrap').survey_result"
+                        t-out="user_input.with_context(survey_result_mode='bootstrap').survey_result"
                     />
                 </div>
             </div>
