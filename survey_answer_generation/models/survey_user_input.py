@@ -52,9 +52,11 @@ class SurveyUserInput(models.Model):
                     suggested_answer.next_survey_question_answer_id.id
                 )
             origin_line = self.origin_input_id.user_input_line_ids.filtered(
-                lambda x: x.question_id.next_survey_question_id == question
-                and x.answer_type == "suggestion"
-                and x.suggested_answer_id.id == suggested_answer_id
+                lambda x: (
+                    x.question_id.next_survey_question_id == question
+                    and x.answer_type == "suggestion"
+                    and x.suggested_answer_id.id == suggested_answer_id
+                )
             )
         else:
             origin_line = self.origin_input_id.user_input_line_ids.filtered(
@@ -69,8 +71,10 @@ class SurveyUserInput(models.Model):
         vals = super()._get_line_comment_values(question, comment)
         if self.origin_input_id and (
             origin_line := self.origin_input_id.user_input_line_ids.filtered(
-                lambda x: x.question_id.next_survey_question_id == question
-                and x.answer_type == "char_box"
+                lambda x: (
+                    x.question_id.next_survey_question_id == question
+                    and x.answer_type == "char_box"
+                )
             )
         ):
             vals["origin_input_line"] = origin_line.id
@@ -107,7 +111,7 @@ class SurveyUserInputLine(models.Model):
     @api.depends(
         *[
             f"value_{x}"
-            for x in {"char_box", "text_box", "numerical_box", "date", "datetime"}
+            for x in ("char_box", "text_box", "numerical_box", "date", "datetime")
         ]
     )
     def _compute_diff_with_origin(self):
